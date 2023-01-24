@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kotlin38.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_programming_languages_fragment"
+            app:destination="@id/programming_languages_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.example.kotlin38.fragments.CatFragment"
+        android:label="fragment_cat"
+        tools:layout="@layout/fragment_cat" >
+        <action
+            android:id="@+id/action_catFragment_to_detailCatFragment"
+            app:destination="@id/detailCatFragment" />
+        <action
+            android:id="@+id/action_catFragment_to_addCatFragment"
+            app:destination="@id/addCatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="com.example.kotlin38.fragments.CinematFragment"
+        android:label="fragment_cinema"
+        tools:layout="@layout/fragment_cinemat" >
+        <action
+            android:id="@+id/action_cinemaFragment_to_detailCameraFragment"
+            app:destination="@id/detailCinematFragment" />
+        <action
+            android:id="@+id/action_cinemaFragment_to_addCinemaFragment"
+            app:destination="@id/addCinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/programming_languages_fragment"
+        android:name="com.example.kotlin38.fragments.ProgrammingLanguagesFragment"
+        android:label="fragment_programming_languages "
+        tools:layout="@layout/fragment_programming_languages" >
+        <action
+            android:id="@+id/action_programming_languages_fragment_to_detailLanguagesFragment"
+            app:destination="@id/detailLanguagesFragment" />
+        <action
+            android:id="@+id/action_programming_languages_fragment_to_edLanguagesFragment"
+            app:destination="@id/edLanguagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCatFragment"
+        android:name="com.example.kotlin38.detailFragment.DetailCatFragment"
+        android:label="fragment_detail_cat2"
+        tools:layout="@layout/fragment_detail_cat" />
+    <fragment
+        android:id="@+id/detailCinematFragment"
+        android:name="com.example.kotlin38.detailFragment.DetailCinematFragment"
+        android:label="fragment_detail_cinemat"
+        tools:layout="@layout/fragment_detail_cinemat" />
+    <fragment
+        android:id="@+id/detailLanguagesFragment"
+        android:name="com.example.kotlin38.detailFragment.DetailLanguagesFragment"
+        android:label="fragment_detail_languages"
+        tools:layout="@layout/fragment_detail_languages" />
+    <fragment
+        android:id="@+id/addCatFragment"
+        android:name="com.example.kotlin38.fragments.AddCatFragment"
+        android:label="fragment_add_cat"
+        tools:layout="@layout/fragment_add_cat" >
+        <action
+            android:id="@+id/action_AddCatFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCinemaFragment"
+        android:name="com.example.kotlin38.fragments.AddCinematFragment"
+        android:label="fragment_add_cinema"
+        tools:layout="@layout/fragment_add_cinemat" >
+        <action
+            android:id="@+id/action_addCinemaFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edLanguagesFragment"
+        android:name="com.example.kotlin38.fragments.AddLanguagesFragment"
+        android:label="fragment_add_languages"
+        tools:layout="@layout/fragment_add_languages" >
+        <action
+            android:id="@+id/action_AddLanguagesFragment_to_programming_languages_fragment"
+            app:destination="@id/programming_languages_fragment" />
+    </fragment>
+</navigation>
